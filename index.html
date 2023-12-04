@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sorting Algorithms</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="algo-link" data-algo="bubble">Bubble Sort</a></li>
+                <li><a href="#" class="algo-link" data-algo="insertion">Insertion Sort</a></li>
+                <li><a href="#" class="algo-link" data-algo="selection">Selection Sort</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="algorithm-info" id="bubble">
+            <h2>Bubble Sort</h2>
+            <p>Description and information about Bubble Sort.</p>
+            <button class="sort-btn">Sort</button>
+            <!-- Visualization or explanation goes here -->
+        </div>
+
+        <div class="algorithm-info" id="insertion">
+            <h2>Insertion Sort</h2>
+            <p>Description and information about Insertion Sort.</p>
+            <button class="sort-btn">Sort</button>
+            <!-- Visualization or explanation goes here -->
+        </div>
+
+        <div class="algorithm-info" id="selection">
+            <h2>Selection Sort</h2>
+            <p>Description and information about Selection Sort.</p>
+            <button class="sort-btn">Sort</button>
+            <!-- Visualization or explanation goes here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 Sorting Algorithms Website</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
+<style>
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+header h1 {
+            margin: 0;
+        }
+
+nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+main {
+            padding: 20px;
+        }
+
+.algorithm-info {
+            display: none;
+        }
+
+footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.algo-link').click(function (e) {
+            e.preventDefault();
+            var algorithmId = $(this).data('algo');
+            $('.algorithm-info').hide();
+            $('#' + algorithmId).show();
+        });
+
+        $('.sort-btn').click(function () {
+            // Implement sorting algorithm logic here or call a function
+            // to visualize the sorting process
+            alert('Implement sorting logic here!');
+        });
+    });
+</script>
